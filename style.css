@@ -8,7 +8,10 @@
 max-width:1200px;
 margin:auto;
 padding:20px;
-display:block;
+}
+
+.header .global_container{
+display:flex;
 align-items:center;
 justify-content:space-between;
 }
@@ -450,3 +453,4 @@ cursor:pointer;
 display:none;
 font-size:18px;
 }
+
