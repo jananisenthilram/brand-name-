@@ -347,6 +347,11 @@ width:100%;
 margin-bottom:15px;
 border-radius:6px;
 display:block;
+cursor:pointer;
+transition:0.3s;
+}
+.work_gallery img:hover{
+transform:scale(1.05);
 }
 .cta{
 background:#2f6df6;
@@ -485,6 +490,7 @@ font-size:40px;
 color:white;
 cursor:pointer;
 }
+
 
 
 
