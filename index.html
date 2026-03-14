@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plumbing Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -29,6 +29,9 @@
                 <span>Emergency?</span><br>
                 <strong>Call +1 234 567 890</strong>
             </div>
+            <button id="rtlToggle" class="rtl_btn">
+            ⇄
+            </button>
 
             <button class="quote_btn">Get a Quote</button>
         </div>
@@ -36,38 +39,50 @@
     </div>
 </header>
 <section class="hero">
-    <div class="hero_left">
-        <div class="slide_text active">
-            <h1>The Most Reliable Plumbing Services in San Francisco</h1>
-            <p>We provide top-quality plumbing services including drain cleaning,
-                water heater installation, leak repairs, and pipe replacement.
-                Our experienced plumbers are ready to help you anytime.</p>
-            <button class="hero_btn">Request a Callback</button>
-        </div>
-        <div class="slide_text">
-            <h1>Fast & Reliable Emergency Plumbing Solutions</h1>
-            <p>Facing a burst pipe or water leak? Our emergency plumbing team
-                is available 24/7 to quickly fix problems and protect your home
-                from further damage.</p>
-            <button class="hero_btn">Call Emergency Service</button>
-        </div>
-        <div class="slide_text">
-            <h1>Professional Plumbing for Homes and Businesses</h1>
-            <p>From residential plumbing repairs to large commercial projects,
-                our certified plumbers deliver reliable solutions with modern
-                tools and expert workmanship.</p>
-            <button class="hero_btn">View Our Services</button>
-        </div>
-        <button class="prev">❮</button>
-    </div>
-    <div class="hero_right">
-        <div class="slider">
-            <img src="image/hero.jpeg" class="slide active">
-            <img src="image/hero2.jpg" class="slide">
-            <img src="image/hero3.jpg" class="slide">
-            <button class="next">❯</button>
-        </div>
-    </div>
+
+<div class="hero_left">
+
+<div class="slide_text active">
+<h1>The Most Reliable Plumbing Services in San Francisco</h1>
+<p>We provide top-quality plumbing services including drain cleaning,
+water heater installation, leak repairs, and pipe replacement.
+Our experienced plumbers are ready to help you anytime.</p>
+<button class="hero_btn">Request a Callback</button>
+</div>
+
+<div class="slide_text">
+<h1>Fast & Reliable Emergency Plumbing Solutions</h1>
+<p>Facing a burst pipe or water leak? Our emergency plumbing team
+is available 24/7 to quickly fix problems and protect your home
+from further damage.</p>
+<button class="hero_btn">Call Emergency Service</button>
+</div>
+
+<div class="slide_text">
+<h1>Professional Plumbing for Homes and Businesses</h1>
+<p>From residential plumbing repairs to large commercial projects,
+our certified plumbers deliver reliable solutions with modern
+tools and expert workmanship.</p>
+<button class="hero_btn">View Our Services</button>
+</div>
+
+
+
+</div>
+
+
+<div class="hero_right">
+
+<div class="slider">
+<img src="image/hero.jpeg" class="slide active">
+<img src="image/hero2.jpg" class="slide">
+<img src="image/hero3.jpg" class="slide">
+
+
+</div>
+
+</div>
+
 </section>
 <section class="about" id="about">
     <div class="about_image">
@@ -273,7 +288,7 @@ we offer affordable emergency services that are just a call away.
     <span class="close">&times;</span>
     <img class="popup_content" id="popupImg">
 </div>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
 
