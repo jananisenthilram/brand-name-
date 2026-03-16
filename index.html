@@ -20,8 +20,8 @@
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="right_section">
@@ -32,7 +32,9 @@
             <button id="rtlToggle" class="rtl_btn">
             ⇄
             </button>
-
+            <button id="darkToggle" class="dark_btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
             <button class="quote_btn">Get a Quote</button>
         </div>
 
@@ -142,6 +144,41 @@ tools and expert workmanship.</p>
 
   </div>
 </section>
+<section class="why">
+<div class="global_container why_container">
+
+<h2 class="why_title">Why Choose Our Plumbing Services?</h2>
+
+<div class="why_cards">
+
+<div class="why_card">
+<i class="fa-solid fa-wrench"></i>
+<h3>Experienced Team</h3>
+<p>Our skilled plumbers handle every repair and installation professionally.</p>
+</div>
+
+<div class="why_card">
+<i class="fa-solid fa-clock"></i>
+<h3>24/7 Emergency</h3>
+<p>We are available anytime for urgent plumbing problems.</p>
+</div>
+
+<div class="why_card">
+<i class="fa-solid fa-dollar-sign"></i>
+<h3>Affordable Pricing</h3>
+<p>Transparent pricing with no hidden charges.</p>
+</div>
+
+<div class="why_card">
+<i class="fa-solid fa-shield"></i>
+<h3>Quality Guarantee</h3>
+<p>We provide reliable and long-lasting plumbing solutions.</p>
+</div>
+
+</div>
+
+</div>
+</section>
 <section class="emergency_section">
 
 <div class="emergency_container">
@@ -160,6 +197,37 @@ we offer affordable emergency services that are just a call away.
 
 <div class="emergency_right">
 <img src="image/emergency.jpg" alt="Emergency Plumbing">
+</div>
+
+</div>
+
+</section>
+<section class="stats">
+
+<div class="global_container stats_container">
+
+<div class="stat">
+<i class="fa-solid fa-user"></i>
+<h2 class="counter" data-target="350">0</h2>
+<p>Happy Clients</p>
+</div>
+
+<div class="stat">
+<i class="fa-solid fa-wrench"></i>
+<h2 class="counter" data-target="500">0</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat">
+<i class="fa-solid fa-clock"></i>
+<h2 class="counter" data-target="20">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<i class="fa-solid fa-phone"></i>
+<h2 class="counter" data-target="24">0</h2>
+<p>Emergency Support</p>
 </div>
 
 </div>
@@ -224,16 +292,30 @@ we offer affordable emergency services that are just a call away.
         </div>
     </div>
 </section>
-<section class="cta" id="contact">
-    <div class="global_container cta_container">
-        <div class="cta_image">
-            <img src="image/help.jpg">
-        </div>
-        <div class="cta_content">
-            <h2>We're here to help! Call Us Today!</h2>
-            <a href="#" class="cta_btn">+1 234 567 890</a>
-        </div>
-    </div>
+<section class="cta">
+<div class="global_container cta_container">
+
+<div class="cta_image">
+<img src="image/help.jpg" alt="Help Image">
+</div>
+
+<div class="cta_content">
+
+<h2>Need Help With Plumbing?</h2>
+
+<p>
+Our professional plumbers are ready to solve your problems quickly.
+Call us anytime for fast and reliable service.
+</p>
+
+<a href="tel:+1234567890" class="cta_call">
+<i class="fa-solid fa-phone"></i>
++1 234 567 890
+</a>
+
+</div>
+
+</div>
 </section>
 <footer class="footer">
 
@@ -288,7 +370,44 @@ we offer affordable emergency services that are just a call away.
     <span class="close">&times;</span>
     <img class="popup_content" id="popupImg">
 </div>
-<script src="js/script.js"></script>
+</script>
+<script>
+
+const toggleBtn = document.getElementById("rtlToggle");
+
+toggleBtn.addEventListener("click", function(){
+
+if(document.documentElement.dir === "rtl"){
+document.documentElement.dir = "ltr";
+}
+else{
+document.documentElement.dir = "rtl";
+}
+
+});
+
+</script>
+<script>
+
+const darkBtn = document.getElementById("darkToggle");
+
+darkBtn.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+localStorage.setItem("theme","dark");
+}else{
+localStorage.setItem("theme","light");
+}
+
+});
+
+if(localStorage.getItem("theme") === "dark"){
+document.body.classList.add("dark");
+}
+
+</script>
 </body>
 </html>
 

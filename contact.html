@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="global_container">
+
+        <div class="logo">
+            <img src="image/logo.jpg" alt="Logo">
+            <span class="brand_name">Blueflow Plumbing</span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="right_section">
+            <div class="emergency">
+                <span>Emergency?</span><br>
+                <strong>Call +1 234 567 890</strong>
+            </div>
+            <button id="rtlToggle" class="rtl_btn">
+            ⇄
+            </button>
+            <button id="darkToggle" class="dark_btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="quote_btn">Get a Quote</button>
+        </div>
+
+    </div>
+</header>
+<section class="contact_hero">
+
+<h1>Contact Us</h1>
+
+<p>
+Have a plumbing problem? Our professional team is ready
+to help you anytime.
+</p>
+
+</section>
+<section class="contact_info">
+
+<h2>Get In Touch</h2>
+
+<div class="info_container">
+
+<div class="info_box">
+<i class="fas fa-map-marker-alt"></i>
+<h3>Address</h3>
+<p>552 W 48th Street, New York, NY</p>
+</div>
+
+<div class="info_box">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p>+1 234 567 890</p>
+</div>
+
+<div class="info_box">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>support@blueflow.com</p>
+</div>
+
+</div>
+
+</section>
+<section class="contact_form">
+
+<h2>Send Us a Message</h2>
+
+<form class="form_container">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<input type="text" placeholder="Subject">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq_container">
+
+<div class="faq_item">
+<button class="faq_question">
+How quickly can you respond to plumbing emergencies?
+<span class="icon">+</span>
+</button>
+<div class="faq_answer">
+<p>Our team is available 24/7 and can respond quickly to emergency plumbing problems.</p>
+</div>
+</div>
+
+<div class="faq_item">
+<button class="faq_question">
+Do you provide services on weekends?
+<span class="icon">+</span>
+</button>
+<div class="faq_answer">
+<p>Yes, we provide plumbing services during weekends and holidays.</p>
+</div>
+</div>
+
+<div class="faq_item">
+<button class="faq_question">
+What areas do you serve?
+<span class="icon">+</span>
+</button>
+<div class="faq_answer">
+<p>We provide plumbing services in the city and surrounding areas.</p>
+</div>
+</div>
+
+<div class="faq_item">
+<button class="faq_question">
+How can I book a plumbing service?
+<span class="icon">+</span>
+</button>
+<div class="faq_answer">
+<p>You can call us directly or fill out the contact form on our website.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+<script>
+
+var questions = document.querySelectorAll(".faq_question");
+
+for (var i = 0; i < questions.length; i++) {
+
+questions[i].addEventListener("click", function(){
+
+var answer = this.nextElementSibling;
+var icon = this.querySelector(".icon");
+
+if(answer.style.display === "block"){
+answer.style.display = "none";
+icon.textContent = "+";
+}
+else{
+answer.style.display = "block";
+icon.textContent = "-";
+}
+
+});
+
+}
+
+</script>
+<footer class="footer">
+
+    <div class="footer_columns">
+
+        
+        <div class="footer_col">
+            <h3>Brand Name</h3>
+
+            <strong>Address</strong>
+            <p>552 W 48th Street, New York, NY 10036</p>
+
+            <strong>Call Us</strong>
+            <p>+1 234 567 890</p>
+
+            <p class="copyright">
+                Copyright © 2026 Local Business| Powered by Local Business</p>
+        </div>
+
+        
+        <div class="footer_col">
+            <h3>Business Name</h3>
+
+            <p>Monday – Closed</p>
+            <p>Tuesday : 11:00 – 09:00</p>
+            <p>Wednesday : 11:00 – 09:00</p>
+            <p>Thursday : 11:00 – 09:00</p>
+            <p>Friday : 11:00 – 09:00</p>
+            <p>Saturday : 11:00 – 09:00</p>
+            <p>Sunday : 11:00 – 09:00</p>
+
+            
+            <div class="social_icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer_col map_col">
+            <iframe 
+                src="https://www.google.com/maps?q=New+York&output=embed"
+                class="map_iframe"
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+</footer>
+<script>
+
+const toggleBtn = document.getElementById("rtlToggle");
+
+toggleBtn.addEventListener("click", function(){
+
+if(document.documentElement.dir === "rtl"){
+document.documentElement.dir = "ltr";
+}
+else{
+document.documentElement.dir = "rtl";
+}
+
+});
+
+</script>
+<script>
+
+const darkBtn = document.getElementById("darkToggle");
+
+darkBtn.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+localStorage.setItem("theme","dark");
+}else{
+localStorage.setItem("theme","light");
+}
+
+});
+
+if(localStorage.getItem("theme") === "dark"){
+document.body.classList.add("dark");
+}
+
+</script>
+</body>
+</html>

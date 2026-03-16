@@ -67,14 +67,28 @@ currentSlide = slides.length - 1;
 showSlide(currentSlide);
 }
 setInterval(nextSlide, 4000);
-const rtlBtn = document.getElementById("rtlToggle");
 
-rtlBtn.addEventListener("click", function(){
+const counters = document.querySelectorAll(".counter");
 
-if(document.documentElement.dir === "rtl"){
-document.documentElement.dir = "ltr";
-}else{
-document.documentElement.dir = "rtl";
+counters.forEach(counter => {
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute("data-target");
+const current = +counter.innerText;
+
+const increment = target / 100;
+
+if(current < target){
+counter.innerText = Math.ceil(current + increment);
+setTimeout(updateCounter, 20);
 }
+else{
+counter.innerText = target;
+}
+
+};
+
+updateCounter();
 
 });

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="global_container">
+
+        <div class="logo">
+            <img src="image/logo.jpg" alt="Logo">
+            <span class="brand_name">Blueflow Plumbing</span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="right_section">
+            <div class="emergency">
+                <span>Emergency?</span><br>
+                <strong>Call +1 234 567 890</strong>
+            </div>
+            <button id="rtlToggle" class="rtl_btn">
+            ⇄
+            </button>
+            <button id="darkToggle" class="dark_btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="quote_btn">Get a Quote</button>
+        </div>
+
+    </div>
+</header>
+<section class="about_hero">
+<div class="global_container about_hero_container">
+<div class="about_hero_text">
+<h1>Plumbing Experts Repair Your Home</h1>
+<p>
+We provide reliable plumbing services for homes and businesses.
+Our experienced technicians handle all plumbing problems efficiently.
+</p>
+<a href="#" class="hero_btn">Book Appointment</a>
+</div>
+<div class="about_hero_image">
+<img src="image/abouthero.jpeg" alt="Plumber">
+</div>
+</div>
+</section>
+
+<section class="about_company">
+<div class="global_container about_company_container">
+<div class="about_company_image">
+<img src="image/aboutcompany.jpg">
+</div>
+<div class="about_company_text">
+<h2>About Our Company</h2>
+<p>
+Our company provides professional plumbing services
+for residential and commercial properties.
+</p>
+<p>
+We focus on reliability, quality service, and
+customer satisfaction.
+</p>
+</div>
+</div>
+</section>
+<section class="mission">
+
+<h2 class="mission_title">Our Mission & Vision</h2>
+
+<div class="mission_container">
+
+<div class="mission_box">
+<i class="fas fa-bullseye"></i>
+<h3>Our Mission</h3>
+<p>
+Our mission is to provide reliable and affordable plumbing
+services while ensuring customer satisfaction and quality work.
+</p>
+</div>
+
+<div class="mission_box">
+<i class="fas fa-eye"></i>
+<h3>Our Vision</h3>
+<p>
+Our vision is to become the most trusted plumbing service
+provider known for professionalism and innovation.
+</p>
+</div>
+
+</div>
+
+</section>
+<section class="process">
+
+<h2 class="process_title">Our Work Process</h2>
+
+<div class="process_container">
+
+<div class="process_step">
+<i class="fas fa-phone"></i>
+<h3>Contact Us</h3>
+<p>Call or book an appointment through our website.</p>
+</div>
+
+<div class="process_step">
+<i class="fas fa-search"></i>
+<h3>Inspection</h3>
+<p>Our plumber inspects the problem carefully.</p>
+</div>
+
+<div class="process_step">
+<i class="fas fa-tools"></i>
+<h3>Repair Work</h3>
+<p>We fix the issue using professional tools.</p>
+</div>
+
+<div class="process_step">
+<i class="fas fa-check-circle"></i>
+<h3>Problem Solved</h3>
+<p>Your plumbing system works perfectly again.</p>
+</div>
+
+</div>
+
+</section>
+<section class="team">
+
+<div class="global_container team_container">
+
+<h2 class="team_title">Meet Our Team</h2>
+
+<div class="team_cards">
+
+<div class="team_card">
+<img src="image/team1.jpg">
+<h3>John Carter</h3>
+<p>Senior Plumber</p>
+</div>
+
+<div class="team_card">
+<img src="image/team2.jpg">
+<h3>David Miller</h3>
+<p>Pipe Installation Specialist</p>
+</div>
+
+<div class="team_card">
+<img src="image/team3.jpg">
+<h3>Emily Smith</h3>
+<p>Customer Service Manager</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer_columns">
+
+        
+        <div class="footer_col">
+            <h3>Brand Name</h3>
+
+            <strong>Address</strong>
+            <p>552 W 48th Street, New York, NY 10036</p>
+
+            <strong>Call Us</strong>
+            <p>+1 234 567 890</p>
+
+            <p class="copyright">
+                Copyright © 2026 Local Business| Powered by Local Business</p>
+        </div>
+
+        
+        <div class="footer_col">
+            <h3>Business Name</h3>
+
+            <p>Monday – Closed</p>
+            <p>Tuesday : 11:00 – 09:00</p>
+            <p>Wednesday : 11:00 – 09:00</p>
+            <p>Thursday : 11:00 – 09:00</p>
+            <p>Friday : 11:00 – 09:00</p>
+            <p>Saturday : 11:00 – 09:00</p>
+            <p>Sunday : 11:00 – 09:00</p>
+
+            
+            <div class="social_icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer_col map_col">
+            <iframe 
+                src="https://www.google.com/maps?q=New+York&output=embed"
+                class="map_iframe"
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+</footer>
+<script>
+
+const toggleBtn = document.getElementById("rtlToggle");
+
+toggleBtn.addEventListener("click", function(){
+
+if(document.documentElement.dir === "rtl"){
+document.documentElement.dir = "ltr";
+}
+else{
+document.documentElement.dir = "rtl";
+}
+
+});
+
+</script>
+<script>
+
+const darkBtn = document.getElementById("darkToggle");
+
+darkBtn.addEventListener("click", function(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+localStorage.setItem("theme","dark");
+}else{
+localStorage.setItem("theme","light");
+}
+
+});
+
+if(localStorage.getItem("theme") === "dark"){
+document.body.classList.add("dark");
+}
+
+</script>
+</body>
+</html>
