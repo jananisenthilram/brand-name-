@@ -19,8 +19,8 @@
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
 
         <div class="right_section">
@@ -39,35 +39,35 @@
 
     </div>
 </header>
-<section class="contact_hero">
+<section class="contact_hero reveal">
 
-<h1>Contact Us</h1>
+<h1 class="reveal">Contact Us</h1>
 
-<p>
+<p class="reveal">
 Have a plumbing problem? Our professional team is ready
 to help you anytime.
 </p>
 
 </section>
-<section class="contact_info">
+<section class="contact_info reveal">
 
-<h2>Get In Touch</h2>
+<h2 class="reveal">Get In Touch</h2>
 
 <div class="info_container">
 
-<div class="info_box">
+<div class="info_box reveal">
 <i class="fas fa-map-marker-alt"></i>
 <h3>Address</h3>
 <p>552 W 48th Street, New York, NY</p>
 </div>
 
-<div class="info_box">
+<div class="info_box reveal">
 <i class="fas fa-phone"></i>
 <h3>Phone</h3>
 <p>+1 234 567 890</p>
 </div>
 
-<div class="info_box">
+<div class="info_box reveal">
 <i class="fas fa-envelope"></i>
 <h3>Email</h3>
 <p>support@blueflow.com</p>
@@ -76,32 +76,32 @@ to help you anytime.
 </div>
 
 </section>
-<section class="contact_form">
+<section class="contact_form reveal">
 
-<h2>Send Us a Message</h2>
+<h2 class="reveal">Send Us a Message</h2>
 
-<form class="form_container">
+<form class="form_container reveal">
 
-<input type="text" placeholder="Your Name" required>
+<input class="reveal" type="text" placeholder="Your Name" required>
 
-<input type="email" placeholder="Your Email" required>
+<input class="reveal" type="email" placeholder="Your Email" required>
 
-<input type="text" placeholder="Subject">
+<input class="reveal" type="text" placeholder="Subject">
 
-<textarea placeholder="Your Message"></textarea>
+<textarea class="reveal" placeholder="Your Message"></textarea>
 
-<button type="submit">Send Message</button>
+<button class="reveal" type="submit">Send Message</button>
 
 </form>
 
 </section>
-<section class="faq">
+<section class="faq reveal">
 
-<h2>Frequently Asked Questions</h2>
+<h2 class="reveal">Frequently Asked Questions</h2>
 
 <div class="faq_container">
 
-<div class="faq_item">
+<div class="faq_item reveal">
 <button class="faq_question">
 How quickly can you respond to plumbing emergencies?
 <span class="icon">+</span>
@@ -169,12 +169,12 @@ icon.textContent = "-";
 }
 
 </script>
-<footer class="footer">
+<footer class="footer reveal">
 
     <div class="footer_columns">
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-left">
             <h3>Brand Name</h3>
 
             <strong>Address</strong>
@@ -188,7 +188,7 @@ icon.textContent = "-";
         </div>
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-right">
             <h3>Business Name</h3>
 
             <p>Monday – Closed</p>
@@ -253,6 +253,25 @@ if(localStorage.getItem("theme") === "dark"){
 document.body.classList.add("dark");
 }
 
+</script>
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 </body>
 </html>

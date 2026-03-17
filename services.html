@@ -19,8 +19,8 @@
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="right_section">
@@ -39,11 +39,11 @@
 
     </div>
 </header>
-<section class="services_hero">
+<section class="services_hero reveal">
 
 <div class="services_container">
 
-<div class="services_text">
+<div class="services_text reveal-left">
 <h1>Professional Plumbing Services</h1>
 
 <p>
@@ -56,16 +56,16 @@ drain cleaning and emergency services.
 
 </div>
 
-<div class="services_image">
+<div class="services_image reveal-right">
 <img src="image/servicehero.jpg" alt="Plumbing Service">
 </div>
 
 </div>
 
 </section>
-<section class="services_section">
+<section class="services_section reveal">
 
-<h2>Our Plumbing Services</h2>
+<h2 class="reveal">Our Plumbing Services</h2>
 
 <div class="services_grid">
 
@@ -108,7 +108,7 @@ drain cleaning and emergency services.
 </div>
 
 </section>
-<section class="service_process">
+<section class="service_process reveal">
 
 <h2>How Our Service Works</h2>
 
@@ -141,13 +141,13 @@ drain cleaning and emergency services.
 </div>
 
 </section>
-<section class="service_details">
+<section class="service_details reveal">
 
-<h2>Our Professional Services</h2>
+<h2 class="reveal">Our Professional Services</h2>
 
 <div class="details_container">
 
-<div class="details_card">
+<div class="details_card reveal">
 <img src="image/leak.jpg" alt="Leak Repair">
 <h3>Leak Repair</h3>
 <p>Fast and reliable leak detection and repair services.</p>
@@ -171,24 +171,24 @@ drain cleaning and emergency services.
 </div>
 
 </section>
-<section class="service_cta">
+<section class="service_cta reveal">
 
-<h2>Need Professional Plumbing Help?</h2>
+<h2 class="reveal">Need Professional Plumbing Help?</h2>
 
-<p>
+<p class="reveal">
 Our expert plumbers are ready to help you with
 any plumbing issue quickly and efficiently.
 </p>
 
-<a href="contact.html" class="cta_btn">Contact Us Today</a>
+<a href="contact.html" class="cta_btn reveal">Contact Us Today</a>
 
 </section>
-<footer class="footer">
+<footer class="footer reveal">
 
     <div class="footer_columns">
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-left">
             <h3>Brand Name</h3>
 
             <strong>Address</strong>
@@ -202,7 +202,7 @@ any plumbing issue quickly and efficiently.
         </div>
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-right">
             <h3>Business Name</h3>
 
             <p>Monday – Closed</p>
@@ -267,6 +267,25 @@ if(localStorage.getItem("theme") === "dark"){
 document.body.classList.add("dark");
 }
 
+</script>
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 </body>
 </html>

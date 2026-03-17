@@ -68,27 +68,45 @@ showSlide(currentSlide);
 }
 setInterval(nextSlide, 4000);
 
-const counters = document.querySelectorAll(".counter");
+const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
+  counter.innerText = '0';
 
-const updateCounter = () => {
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText.replace('+', '');
 
-const target = +counter.getAttribute("data-target");
-const current = +counter.innerText;
+    const increment = target / 100;
 
-const increment = target / 100;
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}+`;
+      setTimeout(updateCounter, 30);
+    } else {
+      counter.innerText = target + '+';
+    }
+  };
 
-if(current < target){
-counter.innerText = Math.ceil(current + increment);
-setTimeout(updateCounter, 20);
-}
-else{
-counter.innerText = target;
-}
-
-};
-
-updateCounter();
-
+  updateCounter();
 });
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// Run on page load
+revealOnScroll();

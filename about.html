@@ -18,9 +18,9 @@
 
         <nav class="nav">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="right_section">
@@ -39,9 +39,9 @@
 
     </div>
 </header>
-<section class="about_hero">
+<section class="about_hero reveal">
 <div class="global_container about_hero_container">
-<div class="about_hero_text">
+<div class="about_hero_text reveal-left">
 <h1>Plumbing Experts Repair Your Home</h1>
 <p>
 We provide reliable plumbing services for homes and businesses.
@@ -49,18 +49,18 @@ Our experienced technicians handle all plumbing problems efficiently.
 </p>
 <a href="#" class="hero_btn">Book Appointment</a>
 </div>
-<div class="about_hero_image">
+<div class="about_hero_image reveal-right">
 <img src="image/abouthero.jpeg" alt="Plumber">
 </div>
 </div>
 </section>
 
-<section class="about_company">
+<section class="about_company reveal">
 <div class="global_container about_company_container">
-<div class="about_company_image">
+<div class="about_company_image reveal-left">
 <img src="image/aboutcompany.jpg">
 </div>
-<div class="about_company_text">
+<div class="about_company_text reveal-right">
 <h2>About Our Company</h2>
 <p>
 Our company provides professional plumbing services
@@ -73,13 +73,13 @@ customer satisfaction.
 </div>
 </div>
 </section>
-<section class="mission">
+<section class="mission reveal">
 
-<h2 class="mission_title">Our Mission & Vision</h2>
+<h2 class="mission_title reveal">Our Mission & Vision</h2>
 
 <div class="mission_container">
 
-<div class="mission_box">
+<div class="mission_box reveal">
 <i class="fas fa-bullseye"></i>
 <h3>Our Mission</h3>
 <p>
@@ -100,13 +100,13 @@ provider known for professionalism and innovation.
 </div>
 
 </section>
-<section class="process">
+<section class="process reveal">
 
-<h2 class="process_title">Our Work Process</h2>
+<h2 class="process_title reveal">Our Work Process</h2>
 
 <div class="process_container">
 
-<div class="process_step">
+<div class="process_step reveal">
 <i class="fas fa-phone"></i>
 <h3>Contact Us</h3>
 <p>Call or book an appointment through our website.</p>
@@ -133,15 +133,15 @@ provider known for professionalism and innovation.
 </div>
 
 </section>
-<section class="team">
+<section class="team reveal">
 
 <div class="global_container team_container">
 
-<h2 class="team_title">Meet Our Team</h2>
+<h2 class="team_title reveal">Meet Our Team</h2>
 
 <div class="team_cards">
 
-<div class="team_card">
+<div class="team_card reveal">
 <img src="image/team1.jpg">
 <h3>John Carter</h3>
 <p>Senior Plumber</p>
@@ -164,12 +164,12 @@ provider known for professionalism and innovation.
 </div>
 
 </section>
-<footer class="footer">
+<footer class="footer reveal">
 
     <div class="footer_columns">
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-left">
             <h3>Brand Name</h3>
 
             <strong>Address</strong>
@@ -183,7 +183,7 @@ provider known for professionalism and innovation.
         </div>
 
         
-        <div class="footer_col">
+        <div class="footer_col reveal-right">
             <h3>Business Name</h3>
 
             <p>Monday – Closed</p>
@@ -249,5 +249,25 @@ document.body.classList.add("dark");
 }
 
 </script>
+<script>
+function revealOnScroll() {
+  const elements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+
+  elements.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
 </body>
 </html>
